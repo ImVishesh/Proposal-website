@@ -10,15 +10,18 @@
     <style>
       body {
         margin: 0;
-        height: 100vh;
+        min-height: 100vh; /* change from height → min-height */
         display: flex;
         justify-content: center;
         align-items: center;
+        padding: 40px 20px; /* 👈 adds breathing room */
+        box-sizing: border-box;
+
         background: linear-gradient(135deg, #ff758c, #ff7eb3);
         font-family: "Poppins", sans-serif;
         color: white;
         text-align: center;
-        overflow: hidden;
+        overflow-x: hidden; /* allow vertical growth */
         position: relative;
       }
 
@@ -106,14 +109,14 @@
     </script>
 
     <div class="container">
-      <h1>Yayyy!! 💖</h1>
+      <h1>Yayy!! 💖</h1>
       <div class="typing" id="text"></div>
       <div class="heart-beat">❤️</div>
     </div>
 
     <script>
       const message =
-        "You just made me the happiest person alive...\nI promise to make you smile every single day 💖";
+        "Thane haan boli ne mharo dil ghano khush ho gayo...\nBas ek hi vaado... thare chehre ri muskaan kadey kam na hon du mhain 💖";
       const textEl = document.getElementById("text");
       let index = 0;
 
